@@ -1,76 +1,46 @@
 {
-  "name": "Generative-Design-Code-Package-p5-js",
+  "name": "generative-auth",
   "version": "1.0.0",
-  "description": "Code package of the book 'Generative Design: Visualize, Program, and Create with JavaScript in p5.js'",
+  "description": "",
+  "main": "gulpfile.js",
   "scripts": {
-    "start": "npm run watch",
-    "watch": "budo --host localhost --dir . --open --live --watch-glob '**/*.{html,css,js}'",
-    "setup": "cd libraries && node setup.js",
-    "encapsulate": "cd libraries && node encapsulate.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
-  "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/generative-design/Code-Package-p5.js.git"
+    "url": "git+https://github.com/yutaroo/generative-auth.git"
   },
-  "keywords": [
-    "processing",
-    "p5",
-    "p5.js",
-    "generative",
-    "computational",
-    "design"
-  ],
-  "contributors": [
-    "Benedikt Groß (http://benedikt-gross.de/)",
-    "Hartmut Bohnacker (https://www.hartmut-bohnacker.de/)",
-    "Joey Lee (http://jk-lee.com/projects/)",
-    "Niels Poldervaart (http://nielspoldervaart.nl/)"
-  ],
+  "author": "Yutaro Ishiwata",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/generative-design/Code-Package-p5.js/issues"
+    "url": "https://github.com/yutaroo/generative-auth/issues"
   },
-  "homepage": "http://www.generative-gestaltung.de/2",
+  "homepage": "https://github.com/yutaroo/generative-auth#reade",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.5",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.24.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0",
+    "webpack": "^4.25.1",
+    "webpack-stream": "^5.1.1"
+  },
   "dependencies": {
-    "budo": "^9.2.2",
-    "chroma-js": "^1.3.4",
-    "fs-sync": "^1.0.4",
-    "g.js": "^0.1.2",
-    "generative-design-library.js": "^0.1.2",
-    "glob": "^7.1.1",
-    "jquery": "^3.2.1",
-    "opentype.js": "^0.6.8",
-    "p5": "^0.5.14",
-    "tooltipster": "^4.2.5",
-    "cheerio": "^1.0.0-rc.2",
-    "fs-extra": "^4.0.2"
-  },
-  "install": {
-    "sources": {
-      "p5": [
-        "node_modules/p5/lib/p5.min.js",
-        "node_modules/p5/lib/addons/p5.dom.min.js"
-      ],
-      "generative-design-library": [
-        "node_modules/generative-design-library.js/dist/generative-design-library.js"
-      ],
-      "g.js": [
-        "node_modules/g.js/dist/g.js"
-      ],
-      "opentype.js": [
-        "node_modules/opentype.js/dist/opentype.js"
-      ],
-      "tooltipster": [
-        "node_modules/tooltipster/dist/js/tooltipster.bundle.js",
-        "node_modules/tooltipster/dist/css/tooltipster.bundle.css",
-        "node_modules/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-noir.min.css"
-      ],
-      "jquery": [
-        "node_modules/jquery/dist/jquery.js"
-      ],
-      "chroma-js": [
-        "node_modules/chroma-js/chroma.js"
-      ]
-    }
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "mysql": "^2.16.0"
   }
 }
