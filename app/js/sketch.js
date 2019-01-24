@@ -3,8 +3,8 @@
 
 var capture;
 var tracker
-var w = 640,
-    h = 480;
+var w = 450,
+    h = 450;
 
 function setup() {
     capture = createCapture({
@@ -32,20 +32,25 @@ function draw() {
     image(capture, 0, 0, w, h);
     var positions = tracker.getCurrentPosition();
 
+    /*
     noFill();
     stroke(255);
     beginShape();
-    for (var i = 0; i < positions.length; i++) {
-        vertex(positions[i][0], positions[i][1]);
+    for (var i = 0; i < ptions.length; i++) {
+      vertex(positions[i][0], positions[i][1]);
+
     }
     endShape();
-
+    console.log(positions);
+    */
     noStroke();
     //特徴点の座標にポイントと番号を配置
     for (var i = 0; i < positions.length; i++) {
-      fill(map(i, 0, positions.length, 0, 360), 50, 100);
-      ellipse(positions[i][0], positions[i][1], 4, 4);
-      text(i, positions[i][0], positions[i][1]);
+      //fill(map(i, 0, positions.length, 0, 360), 50, 100);
+      fill(255);
+      ellipse(positions[i][0], positions[i][1], 5, 5);
+      //text(i, positions[i][0], positions[i][1]);
+
 
       //座標を62番を基準に再計算
       var arrayRecalc = [];
@@ -62,12 +67,15 @@ function draw() {
       } else{
         recalc1 = positions[i][1] -  positions[62][1]
       }
-      arrayRecalc[i] = {recalc0, recalc1};
 
+      arrayRecalc[i] = [Math.round(recalc0), Math.round(recalc1)];
+      console.log(arrayRecalc);
 
-      //for (var i = 0; i < round(recalc0); i++){
-      //  ellipse(random(w), random(h), 4, 4);
-      //}
+      /*
+      for (var i = 0; i < round(recalc0); i++){
+        ellipse(random(w), random(h), 4, 4);
+      }
+      */
     }
 
     if (positions.length > 0) {
@@ -83,5 +91,10 @@ function draw() {
       //ellipse(positions[62][0], positions[62][1], 50, 50);
       //for (var i = 0; i < )
     }
+}
+
+
+function lineArc() {
+  
 }
 
