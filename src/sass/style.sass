@@ -7,20 +7,29 @@ html
   -webkit-text-size-adjust: 100%
 
 body
+  position: relative;
   margin: 0
 
 article, aside, footer, header, nav, section
   display: block
 
 h1
+  position: absolute;
+  top: 0;
+  left: 2vw;
+  z-index: 999;
   font-size: 1.6em
   font-weight: normal
   letter-spacing: 0.25em
-  margin: 0.67em 0
+  margin: 2vh 0
 
 video
 
-canvas
+canvas 
+  clip-path: circle(200px at center);
+  transform: scaleX(-1);
+
+//#defaultCanvas0
   display: block
   margin: 0 auto
   border-radius: 50%

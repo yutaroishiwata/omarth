@@ -2,9 +2,10 @@
 // https://github.com/kylemcdonald/AppropriatingNewTechnologies/wiki/Week-2
 
 var capture;
-var tracker
-var w = 450,
+var tracker;
+var w = 400,
     h = 450;
+var pg;
 
 function setup() {
     capture = createCapture({
@@ -17,8 +18,9 @@ function setup() {
         console.log('capture ready.')
     });
     capture.elt.setAttribute('playsinline', '');
-    createCanvas(w, h);
-    capture.size(w, h);
+    createCanvas(windowWidth, windowHeight);
+    pg = createGraphics(w, h); //createGraphicsはimage関数を利用してcreateCanvasの上に配置される
+    capture.size(w/2, h/2); //positionはここの座標を元に生成される。createGraphicsに描画する場合半分の値にする必要がる。
     capture.hide();
 
     colorMode(HSB);
@@ -29,8 +31,11 @@ function setup() {
 }
 
 function draw() {
-    image(capture, 0, 0, w, h);
-    var positions = tracker.getCurrentPosition();
+  translate(width/2, height/2);
+  background(255);
+  image(pg, w/-2, h/-2, w, h); //createGraphics中央配置 
+  pg.background(51);
+  var positions = tracker.getCurrentPosition();
 
     /*
     noFill();
@@ -43,14 +48,13 @@ function draw() {
     endShape();
     console.log(positions);
     */
-    noStroke();
+    pg.noStroke();
     //特徴点の座標にポイントと番号を配置
     for (var i = 0; i < positions.length; i++) {
       //fill(map(i, 0, positions.length, 0, 360), 50, 100);
-      fill(255);
-      ellipse(positions[i][0], positions[i][1], 5, 5);
+      pg.fill(255);
+      pg.ellipse(positions[i][0], positions[i][1], 2, 2);
       //text(i, positions[i][0], positions[i][1]);
-
 
       //座標を62番を基準に再計算
       var arrayRecalc = [];
@@ -69,7 +73,8 @@ function draw() {
       }
 
       arrayRecalc[i] = [Math.round(recalc0), Math.round(recalc1)];
-      console.log(arrayRecalc);
+      var test = mag(Math.round(recalc0), Math.round(recalc1))
+      console.log(Math.round(test));
 
       /*
       for (var i = 0; i < round(recalc0); i++){
@@ -78,23 +83,22 @@ function draw() {
       */
     }
 
+    /*
     if (positions.length > 0) {
       var mouthLeft = createVector(positions[44][0], positions[44][1]);
       var mouthRight = createVector(positions[50][0], positions[50][1]);
       var smile = mouthLeft.dist(mouthRight);
-      // uncomment the line below to show an estimate of amount "smiling"
-      // rect(20, 20, smile * 3, 20);
+      //uncomment the line below to show an estimate of amount "smiling"
+      rect(20, 20, smile * 3, 20);
 
-      // uncomment for a surprise
+      uncomment for a surprise
       noStroke();
       fill(0, 255, 255);
-      //ellipse(positions[62][0], positions[62][1], 50, 50);
-      //for (var i = 0; i < )
+      ellipse(positions[62][0], positions[62][1], 50, 50);
+      for (var i = 0; i < )
     }
-}
+    */
 
-
-function lineArc() {
-  
+    //lineArc();
 }
 
