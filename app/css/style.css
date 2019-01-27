@@ -22,7 +22,5 @@ h1 {
   margin: 2vh 0; }
 
 canvas {
-  -webkit-clip-path: circle(200px at center);
-  clip-path: circle(200px at center);
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1); }
