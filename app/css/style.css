@@ -21,6 +21,10 @@ h1 {
   letter-spacing: 0.25em;
   margin: 2vh 0; }
 
+video {
+  -webkit-clip-path: circle(200px at center);
+  clip-path: circle(200px at center); }
+
 canvas {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1); }
