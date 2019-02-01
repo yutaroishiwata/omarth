@@ -92,8 +92,8 @@ function draw() {
   }
 
   //アート生成関数
-  linesArcCW(200, recalc0, 5);
-  linesArcCCW(200, recalc1, 5);
+  linesArcCW(200, recalc0, 5 * recalc0);
+  linesArcCCW(200, recalc1, 5 * recalc1);
 }
 
 //時計回り
