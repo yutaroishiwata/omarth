@@ -56,7 +56,7 @@ function setup() {
 }
 
 function draw() {
-  translate(width/2, height/2);
+  translate(width/2, height/2;
   background(255);
 
   image(pg, w/-2, h/-2, w, h); //createGraphics中央配置
@@ -92,8 +92,8 @@ function draw() {
   }
 
   //アート生成関数
-  linesArcCW(200, recalc0, 5);
-  linesArcCCW(200, recalc1, 5);
+  linesArcCW(200, recalc0, 5 * recalc0);
+  linesArcCCW(200, recalc1, 5 * recalc1);
 }
 
 //時計回り

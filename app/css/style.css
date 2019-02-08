@@ -74,6 +74,9 @@ h1 {
   background: #000;
   cursor: pointer; }
 
+.ajust-container {
+  display: none; }
+
 #video {
   display: block;
   width: 100%; }
