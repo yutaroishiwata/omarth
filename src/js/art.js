@@ -56,7 +56,7 @@ function setup() {
 }
 
 function draw() {
-  translate(width/2, height/2;
+  translate(width/2, height/2);
   background(255);
 
   image(pg, w/-2, h/-2, w, h); //createGraphics中央配置
