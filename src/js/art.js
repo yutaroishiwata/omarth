@@ -1,22 +1,3 @@
-// https://kylemcdonald.github.io/cv-examples/
-// https://github.com/kylemcdonald/AppropriatingNewTechnologies/wiki/Week-2
-
-/*
-const medias = {audio : false, video : true},
-      video  = document.getElementById("video");
-
-navigator.getUserMedia(medias, successCallback, errorCallback);
-
-function successCallback(stream) {
-  video.srcObject = stream;
-};
-
-function errorCallback(err) {
-  alert(err);
-};
-*/
-
-
 var tracker;
 var w = 400,
     h = 400;

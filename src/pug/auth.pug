@@ -10,17 +10,17 @@ html
     script(src="js/model_pca_20_svm.js" type="text/javascript")
     script(src="js/jsfeat-min.js" type="text/javascript")
     link(rel="stylesheet" href="https://use.typekit.net/auo3rvi.css")
+    link(rel="stylesheet" href="css/normalize.css" type="text/css")
     link(rel="stylesheet" href="css/style.css" type="text/css")
   body
-    a(href="./index.html")
-      h1.logo-common OMARTH
-    .ajust-container
-      p Blur Size:
-        input(type="range" id="blurSize" value="50")
-      p Low Threshold:
-        input(type="range" id="lowThreshold" value="15")
-      p High Threshold:
-        input(type="range" id="highThreshold" value="25")
-    #canvas
-    #capture
-    script(src="js/auth.js" type="text/javascript")
+    .main-container.main-container--black
+      a(href="./index.html")
+        h1.logo-common OMARTH
+      .ajust-container
+        p Blur Size:
+          input(type="range" id="blurSize" value="50")
+        p Low Threshold:
+          input(type="range" id="lowThreshold" value="15")
+        p High Threshold:
+          input(type="range" id="highThreshold" value="25")
+      script(src="js/auth.js" type="text/javascript")

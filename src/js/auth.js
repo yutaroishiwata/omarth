@@ -19,16 +19,6 @@ function setup() {
     capture.size(w, h);
     capture.hide();
     buffer = new jsfeat.matrix_t(w, h, jsfeat.U8C1_t);
-    /*
-    capture.elt.setAttribute('playsinline', '');
-    canvas = createCanvas(windowWidth, windowHeight);
-    canvas.parent('canvas');
-    pg = createGraphics(w, h); //createGraphicsはimage関数を利用してcreateCanvasの上に配置される
-    pg.parent('pg');
-    pg.capture.size(w, h);
-    pg.capture.hide();
-    buffer = new jsfeat.matrix_t(w, h, jsfeat.U8C1_t);
-    */  
 }
 
 function jsfeatToP5(src, dst) {
@@ -51,9 +41,8 @@ function jsfeatToP5(src, dst) {
 }
 
 function draw() {
-    //translate(width/2, height/2);
-    //image(pg, 0, 0, 400, 400);
-    image(capture, 0, 0, w, h);
+    translate(width/2, height/2);
+    image(capture, w/-2, h/-2, w, h);
     capture.loadPixels();
     if (capture.pixels.length > 0) { // don't forget this!
         var blurSize = select('#blurSize').elt.value;
@@ -73,6 +62,6 @@ function draw() {
             buffer.data[i] = 255 - buffer.data[i];
         }
         result = jsfeatToP5(buffer, result);
-        image(result, 0, 0, 640, 480);
+        image(result, w/-2, h/-2, w, h);
     }
 }
