@@ -67,6 +67,7 @@ function draw() {
       buffer.data[i] = 255 - buffer.data[i];
     }
 
+    console.log(buffer.data[i]);
     result = jsfeatToP5(buffer, result);
     image(result, w / -2, h / -2, w, h);
   }

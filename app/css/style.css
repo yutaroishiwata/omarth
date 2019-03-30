@@ -18,7 +18,7 @@ h1 {
   top: 0;
   left: 2vw;
   z-index: 999;
-  font-size: 1.4em;
+  font-size: 1.6vw;
   font-weight: normal;
   letter-spacing: 0.25em;
   margin: 2vh 0; }
@@ -41,7 +41,7 @@ h1 {
     background: #000; }
 
 .logo-sub__text {
-  font-size: 40px;
+  font-size: 2.8vw;
   font-weight: bold;
   line-height: 0.5;
   letter-spacing: 0.5em;
@@ -59,14 +59,21 @@ h1 {
     height: auto;
     margin-left: 3vw; }
 
+.caption {
+  font-weight: bold;
+  text-align: center; }
+
 .next-button {
   position: absolute;
   bottom: 10vh;
   width: 13vw;
+  min-width: 120px;
   height: 5vh;
   left: 0;
   right: 0;
   margin: auto;
+  padding: 0;
+  border: 0;
   border-radius: 3em;
   font-size: 0.8em;
   letter-spacing: 1em;
